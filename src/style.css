@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0f1424;
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+}
+
+.dashboard {
+  min-height: 100vh;
+  padding: 4rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard__content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(300px, 330px))[1];
+      grid-template-columns: repeat(1, minmax(300px, 330px));
+}
+
+.dashboard__person {
+  width: 100%;
+  background-color: #6f76c8;
+  border-radius: 1rem;
+}
+
+.dashboard__item {
+  width: 100%;
+  padding-top: 2.15rem;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 92% -8%;
+  border-radius: 1rem;
+}
+
+.dashboard__item:hover .tracking-card {
+  background-color: #5847eb;
+}
+
+.dashboard__item--work {
+  background-color: #ff8c66;
+  background-image: url("./images/icon-work.svg");
+}
+
+.dashboard__item--play {
+  background-color: #56c2e6;
+  background-image: url("./images/icon-play.svg");
+}
+
+.dashboard__item--study {
+  background-color: #ff5c7c;
+  background-image: url("./images/icon-study.svg");
+}
+
+.dashboard__item--exercise {
+  background-color: #4acf81;
+  background-image: url("./images/icon-exercise.svg");
+}
+
+.dashboard__item--social {
+  background-color: #7536d3;
+  background-image: url("./images/icon-social.svg");
+}
+
+.dashboard__item--self-care {
+  background-color: #f1c65b;
+  background-image: url("./images/icon-self-care.svg");
+}
+
+.info-card {
+  background-color: #5847eb;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.info-card__photo {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.info-card__title {
+  font-weight: 300;
+  margin: 0.5rem 0 0;
+}
+
+.info-card__subtitle {
+  font-weight: 300;
+  margin: 0;
+  font-size: 12px;
+}
+
+.view-selector {
+  padding: 1.25rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.view-selector__item {
+  font-size: 12px;
+  color: #bdc1ff;
+  cursor: pointer;
+}
+
+.view-selector__item:hover, .view-selector__item--active {
+  color: #fff;
+}
+
+.tracking-card {
+  background-color: #6f76c8;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  position: relative;
+  bottom: -2px;
+}
+
+.tracking-card__header, .tracking-card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tracking-card__header {
+  margin-bottom: 1rem;
+}
+
+.tracking-card__menu {
+  cursor: pointer;
+}
+
+.tracking-card__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+
+.tracking-card__time {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.tracking-card__prev-period {
+  font-size: 12px;
+  color: #bdc1ff;
+  font-weight: 300;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 1024px) {
+  .dashboard__content {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .dashboard__person {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 3;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .info-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .info-card__photo {
+    margin-bottom: 1.5rem;
+  }
+  .info-card__title {
+    font-size: 30px;
+  }
+  .view-selector {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .view-selector__item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .tracking-card__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .tracking-card__time {
+    margin-bottom: 0.75rem;
+    font-size: 48px;
+  }
+  .tracking-card__header {
+    margin-bottom: 0.75rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

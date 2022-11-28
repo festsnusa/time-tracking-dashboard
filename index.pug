@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Time tracking dashboard
+    link(rel="stylesheet", href="./src/style.css")
+  body 
+    section.dashboard
+      .dashboard__content 
+        .dashboard__person 
+          .info-card 
+            img.info-card__photo(src="./src/images/image-jeremy.png", alt="jeremy")
+            .info-card__text 
+              p.info-card__subtitle Report for 
+              h3.info-card__title Jeremy Robson
+          .view-selector 
+            .view-selector__item Daily
+            .view-selector__item.view-selector__item--active Weekly
+            .view-selector__item Monthly
+
+      .attribution
+        p Challenge by 
+          a(href="https://www.frontendmentor.io?ref=challenge" target="_blank") Frontend Mentor
+        p Coded by 
+          a(href="#") festsnusa
+
+    script(src="./src/app.js")
